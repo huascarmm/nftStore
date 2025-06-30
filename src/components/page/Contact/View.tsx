@@ -5,6 +5,7 @@ import { UserTable } from "@/components/model/User/UserTable"
 
 import { Spacer } from "@/components/ui/Spacer"
 
+import { CustomInput } from "@/components/custom_input/custom_input"
 import { mockUserList } from "@/mocks/User"
 
 const THEMES = [
@@ -67,6 +68,12 @@ export const TopPageView: VFC = () => {
           <span className="pl-2 text-primary">{theme}</span>
         </h2>
       </div>
+      <CustomInput
+        label="Email"
+        name="email"
+        value=""
+        onChange={(e) => console.log(e.target.value)}
+      />
       <Spacer size={8} />
       <UserTable users={mockUserList} />
     </main>
