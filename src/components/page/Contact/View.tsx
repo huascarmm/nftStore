@@ -4,6 +4,8 @@ import { VFC } from "react"
 
 import { Spacer } from "@/components/ui/Spacer"
 
+import { CustomInput } from "@/components/custom_input/custom_input"
+
 
 const THEMES = [
   "light",
@@ -53,6 +55,12 @@ export const TopPageView: VFC = () => {
       <div className="text-center prose">
         <h1>Contáctanos!</h1>
       </div>
+      <CustomInput
+        label="Email"
+        name="email"
+        value=""
+        onChange={(e) => console.log(e.target.value)}
+      />
       <Spacer size={8} />
     </main>
   )
