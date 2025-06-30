@@ -1,11 +1,9 @@
 import { useTheme } from "next-themes"
 import { VFC } from "react"
 
-import { UserTable } from "@/components/model/User/UserTable"
 
 import { Spacer } from "@/components/ui/Spacer"
 
-import { mockUserList } from "@/mocks/User"
 
 const THEMES = [
   "light",
@@ -51,24 +49,11 @@ export const TopPageView: VFC = () => {
       className="flex flex-col justify-center items-center p-4 h-screen"
       onChange={handleChange}
     >
-      <select className="w-full max-w-xs select select-bordered">
-        <option disabled selected>
-          Pick your favorite theme
-        </option>
-        {THEMES.map((themeName) => (
-          <option key={themeName}>{themeName}</option>
-        ))}
-      </select>
       <Spacer size={8} />
       <div className="text-center prose">
-        <h1>Play with daisyUI on Next.js!</h1>
-        <h2>
-          current theme is
-          <span className="pl-2 text-primary">{theme}</span>
-        </h2>
+        <h1>Contáctanos!</h1>
       </div>
       <Spacer size={8} />
-      <UserTable users={mockUserList} />
     </main>
   )
 }
