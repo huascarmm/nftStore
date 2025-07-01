@@ -1,2 +1,7 @@
-import TopPage from "@/components/page/Top/"
-export default TopPage
+import ContactForm from "@/components/page/Contactenos/ContactForm";
+
+const ContactenosPage = () => {
+  return <ContactForm />;
+};
+
+export default ContactenosPage;
