@@ -1,4 +1,7 @@
 import React, { ReactNode } from 'react';
+import Navbar from '@/components/ui/AboutUs/Navbar';
+import Header from '@/components/ui/AboutUs/Header';
+import Footer from '@/components/ui/AboutUs/Footer';
 
 interface AboutProps {
   children?: ReactNode;
@@ -9,7 +12,11 @@ interface AboutProps {
 const AboutUs = ({ children }: AboutProps) => {
   return (
     <div className="container-class">
-      {/* Contenido del componente */}
+      <Navbar />
+
+      <Header />
+
+      <Footer />
       {children}
     </div>
   );
