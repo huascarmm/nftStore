@@ -1,2 +1,2 @@
-import TopPage from "@/components/page/Top/"
-export default TopPage
+import ContactPage from "@/components/page/Contact/index"
+export default ContactPage
