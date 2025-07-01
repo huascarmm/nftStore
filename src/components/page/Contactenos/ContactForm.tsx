@@ -1,5 +1,9 @@
 import React, { useState } from "react";
 
+import Button from "@/components/ui/Button";
+import Input from "@/components/ui/Input";
+import Textarea from "@/components/ui/Textarea";
+
 const ContactForm = () => {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
   const [submitted, setSubmitted] = useState(false);
@@ -21,51 +25,31 @@ const ContactForm = () => {
         <div className="text-success">¡Gracias por contactarnos!</div>
       ) : (
         <form onSubmit={handleSubmit} className="space-y-4">
-          <div className="form-control">
-            <label className="label">
-              <span className="font-medium label-text">Nombre</span>
-            </label>
-            <input
-              type="text"
-              name="name"
-              value={form.name}
-              onChange={handleChange}
-              className="w-full input input-bordered"
-              required
-            />
-          </div>
-          <div className="form-control">
-            <label className="label">
-              <span className="font-medium label-text">Correo electrónico</span>
-            </label>
-            <input
-              type="email"
-              name="email"
-              value={form.email}
-              onChange={handleChange}
-              className="w-full input input-bordered"
-              required
-            />
-          </div>
-          <div className="form-control">
-            <label className="label">
-              <span className="font-medium label-text">Mensaje</span>
-            </label>
-            <textarea
-              name="message"
-              value={form.message}
-              onChange={handleChange}
-              className="w-full textarea textarea-bordered"
-              rows={4}
-              required
-            />
-          </div>
-          <button
-            type="submit"
-            className="w-full btn btn-primary roudend"
-          >
-            Enviar
-          </button>
+          <Input
+            label="Nombres"
+            type="text"
+            name="name"
+            value={form.name}
+            onChange={handleChange}
+            required
+          />
+          <Input
+            label="Correo electrónico"
+            type="email"
+            name="email"
+            value={form.email}
+            onChange={handleChange}
+            required
+          />
+          <Textarea
+            label="Mensaje"
+            name="message"
+            value={form.message}
+            onChange={handleChange}
+            rows={4}
+            required
+          />
+          <Button type="submit">Enviar</Button>
         </form>
       )}
     </div>
